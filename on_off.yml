@@ -55,9 +55,10 @@
     pause:
       prompt: "Turn them back on for 15 seconds"
       seconds: 15
+
   - name: TURN LIGHTS OFF and Ends
-      uri:
-        url: "http://{{ip_address}}/api/{{username}}/lights/{{item}}/state"
-        method: PUT
-        body: '{{off_state|to_json}}'
-      loop: "{{ range(1, light_info.json.lights | length + 1)|list }}"
+    uri:
+      url: "http://{{ip_address}}/api/{{username}}/lights/{{item}}/state"
+      method: PUT
+      body: '{{off_state|to_json}}'
+    loop: "{{ range(1, light_info.json.lights | length + 1)|list }}"
