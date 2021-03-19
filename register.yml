@@ -6,7 +6,8 @@
 
   - name: PROMPT USER TO PRESS PHYSICAL BUTTON HUE HUB
     pause:
-      prompt: "Press the button on the hub now..."
+      prompt: "Press the button on the hub in the next 30 seconds"
+      seconds: 30
 
   - name: INCLUDE IP ADDRESS FROM username_info.yml
     include_vars:
